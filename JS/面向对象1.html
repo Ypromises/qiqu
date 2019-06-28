@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>面向对象1</title>
+ </head>
+ <body>
+   <div id="parentDic" >
+      <div id="lilei" onmouseover="lilei.intrSelg=f()"
+	  onmouseout="dialog.style.display='none'""></div>
+	  <div id="hmm" onmouseover="hmm.intrSelg=f()"
+	  onmouseout="dialog.style.display='none'""></div>
+	  <div id="dialog"></div>
+   </div>
+   <script> 
+   /* 创建两个对象，分别描述李雷和韩梅梅
+   李雷：sanme：“Li Lei”,age:12
+   韩梅梅：sanme：“Han Meimei”，age：11
+   都可以自我介绍：intrSelf
+   */
+      var lilei={
+		  "sname":"Li Lei",
+		  "age":12,
+		  "intrSelf":function(){
+			  alert("I'm Li Lei,I'm 12");
+		  }
+	  }
+	   var hmm={
+		  "sname":"Han Meimei",
+		  "age":11,
+		  "intrSelf":function(){
+			  alert("I'm Han Meimei,I'm 11");
+		  }
+	  }
+	  /*遍历对象的所有成员
+	     其实相当于遍历hash数组中的每个元素
+	  */
+	  for(var key in hmm){
+		   console.log(key+":"+hmm[key]);
+		                //不能用.key!
+	  }
+
+
+
+
+
+	  var arr=[1,2,3,4,5];
+	  if(!arr.hasOwnProperty("indexOf")){
+		  arr.indexOf=function(kword){
+			  for (var i=0;i<this.length ;i++ )
+			  {
+			
+					if(arr[i]==kword){
+						return i;
+					}
+			  } 
+			  return -1;
+		  }
+		 
+	  }
+   document.write(arr.indexOf("3"));//2
+
+   </script>
+ </body>
+</html>

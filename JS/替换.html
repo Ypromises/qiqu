@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>替换</title>
+  <script>
+	var kword=/ig;/,区分大小写，全部替换
+	var reply=prompt("输入回复");
+	//Step1:查找所有匹配的关键字
+	var arr=reply.match(kword);
+	//null
+	//Step2:将所有no，替换为**
+	reply=reply.replace(kword,"**");
+	//Step3:输出替换后结果，输出"共替换?处"
+	alert(reply);
+	alert("共替换"+arr.length+"处");
+   </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

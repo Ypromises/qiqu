@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>闭包</title>
+    <script>
+	  /*定义一个取号机函数
+	    每调用一次，顺序生成一个永不重复的序号
+	  */
+	  
+	/*  function getNum(){
+		  var n=1;
+		  var counter=function(){return n++};
+		  return counter;
+	  }*/
+	  function outer(){
+		  var n=1;
+
+
+		  function inner(){
+			  return n++;
+		  }
+		  return inner;//调用函数必须用return调用
+	  }
+	   var getNum = outer();
+	   //getNum -->function inner(){ return n++}
+
+	  
+
+	   console.log(getNum());//1
+	   //前一个活动对象释放
+	   console.log(getNum());//重新创建活动对象 n=1开始//2
+	   console.log(getNum());//3
+
+	   var n=100; //全局污染
+
+	   console.log(getNum());//4
+	   console .log(getNum());//5
+
+ 
+    /*笔试题*/
+
+     function outer1(){
+		 var arr=[];
+		 for(var i=0;i<3;i++){
+			 arr.push(function(){return i})
+		 }
+		 return arr;
+	 }
+	 var getFuns=outer1();//有几个要受保护的i？
+	 console.log(getFuns[0]());//? 3
+	 console.log(getFuns[1]());//? 3
+	 console.log(getFuns[2]());//? 3
+
+
+
+	</script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>解码</title>
+  <script>
+     /*
+	   //例子：25105219162742620320=我喜欢你
+	   将encode函数编码后的数字字符串解码回原文
+	 */
+	 function decode(code){
+		 //将每5位取一次子字符串
+		 //i从0开始，每隔5个字符遍历，到code.length结束，同时创建新数组arr 
+		 //从1开始，取5个字符 -->unicode
+			//  var char=String.formCharCode(unicode) 将char追加到数组结尾
+			//循环退出后，返回数组拼接后的结果
+		 for(var i=0,arr=[];i<code.length;i+=5){
+			 arr.push(String.fromCharCode(code.substr(i,5)));
+		 }
+		 return arr.join("");
+		   
+	 }
+
+	 function mail(email){
+		 //工具：2个
+		 //indexOf查找字符的位置
+		 //slice 从某个位置开始，截取到某位位置
+
+         var i=email.indexOf("@");
+         var userNmae=email.slice(0,i);
+		 var domain=email.slice(i+1);
+
+		 alert("用户名"+username);
+		 alert("域名"+domain);
+	 }
+  </script>
+ </head>
+ <body>
+  <button onclick="document.write(decode(prompt('输入编码')))">解码</button>
+  <button onclick="mail(prompt('输入编码'))">输入邮箱</button>
+ </body>
+</html>

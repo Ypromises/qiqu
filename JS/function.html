@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>function</title>
+  <script>
+    /*以下函数创建正确的是*/
+	var arr=[1,12,23,123,2,3]
+	//选项1 function compare(a,b){return a-b;}
+	//选项2 var compare=function(a,b){return a-b;}
+	//选项3 X var compare=new Function(a,b,return a-b);
+	var compare =new Function("a","b","return a-b");
+	arr.sort(compare);
+	console.log(arr);
+
+	
+	var a=100;
+	function fun(a){
+		a++;
+		console.log(a);
+	}
+	a=100;
+	fun(a);//101
+	consolo.log(a);//100
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

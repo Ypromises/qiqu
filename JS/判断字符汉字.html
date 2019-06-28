@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>判断字符</title>
+ </head>
+ <body>
+   <script>
+       /*请用户输入一个字符，程序判断字符的种类 
+	     如果“0”<=字符<=“9” 输出数字
+		 如果“\u4e00”<=字符<="\u9fa5" 输出汉字
+		 如果"a"<=字符<="z"或者"A"<=字符<="Z"，输出字母否则输出其他字符
+		 */
+	/*	 var input=prompt("请输入一个字符");
+		 console.log(
+		    input>="0"&&input<="9"?"是数字":
+			input>="\u4e00"&&input<="\u9fa5"?"是汉字":
+			input>="a"&&input<="z"||input>="A"&&input<="Z"?"是字母":
+			                                              "其他字符"
+
+		 );  */
+
+		 /*计算闰年: 能被4整除但不能被100整除
+		             能被400整除*/
+				/*	 var year=prompt("请输入年份");
+					 console.log(
+					    year%4==0 && year%100!=0 ||year%400==0?"是闰年":
+						                                        "是平年"
+					 );   */
+
+		  /*计算可莱托指数：
+		    请输入用户身高（m）保存在height中
+			请输入用户体重（kg）保存在weight中
+			计算可莱托指数（clayto）=体重/（身高平方）
+			如果clayto<20，输出瘦
+			如果clayto>25, 输出胖
+			          否则输出正常
+		  */
+        var height=prompt("请输入身高（m）");
+		var weight=prompt("请输入体重（kg）");
+		var clayto=weight/(height*height);
+		console.log(
+		    clayto<20?"瘦":
+			clayto>25?"胖":
+			          "正常"
+		);
+   </script>
+ </body>
+</html>

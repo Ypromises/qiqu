@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>栈</title>
+    <script>
+	  var bus=[];
+	  for(var i=0;i<5;i++){
+		  bus.push("乘客"+i);
+		  console.log(bus);
+	  }
+	  while(bus.length!=0){
+		  var first=bus.pop();
+		  console.log(first+"下车");
+		  console.log(bus);
+		  
+	  }
+       
+	  function dec2bin(dec){
+		  //定义一个数组，保存每次的余数
+           var bin=[];
+		  //循环条件：dec>0
+		  while(dec>0){
+		  //用dec反复%2 ， 将余数压入输入数组
+		  bin.unshift(dec%2);
+		  //将dec替换为（dec/2）取整结果
+		 // return bin.reverse().join("");
+		  dec=parseInt(dec/2);
+		  }
+		  return bin.join("");
+	  }
+	  var n=105;
+      console.log(dec2bin(n));
+	  console.log(n.toString(2));
+
+	  var shen=5;
+	  var queue=[];
+	  for(var i=0;i<6;i++){  //6位顾客在先后排队
+		  queue.push("顾客"+i);
+	  }
+	  console.log(queue);
+	  
+	  while(shen>0){
+		  var first=queue.shift();
+		  console.log(first+"抢到一部;还剩"+(--shen));
+		  console.log(queue);
+	  }
+	  console.log(queue+"没抢到");
+	</script>
+ </head>
+ <body>
+    
+ </body>
+</html>

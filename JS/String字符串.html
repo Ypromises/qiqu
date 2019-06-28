@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>String</title>
+  <script>
+     var pid="110111199507101133";
+	 var birth=pid.slice(6,-5+1);
+	 console.log(birth);
+	 //获得倒数第二位，判断性别
+	 var gender=pid[pid.length-2]%2==0?"女":"男";
+	 console.log(gender);
+
+	 var n=100;//原始类型的值，本来没有任何方法
+	 console.log(new Number(n).toString(2));
+	 //*****临时Number对象被释放
+	 var str="张";//原始类型的值，本来没有任何方法
+	 console.log(new String(str).charCodeAt(0));
+	 //*****临时String对象被释放
+
+	 /*转义字符*/
+	 var str="js是\"互联网第一大语言\"";
+	 // /\意思是：按原文解析\后的字符
+	 console.log(str);
+	 str="\\\"可避免引号冲突";
+	 console.log(str);
+
+	 var str="明明喜欢我，却不告诉我;\n  \t别理我，我想静静";//  \n换行
+	 console.log(str);
+
+
+
+	 var path="C:\Users\Desktop\作业\JS\String字符串.html";
+	 console.log(path);
+
+
+	 /*鄙视题*/
+	//将英文句子中*每个*单词首字母变大写！
+	//you can you up
+	function parseFirst(stmt){
+		//Step1:先按空格，切割字符串
+		var arr=stmt.split(" ");
+		//Step2:遍历切割后的数组
+		for(var i=0;i<arr.length;i++){
+		//      取第一个字符转大写，再拼接剩余字符
+
+
+
+
+		//      拼接后新的单词放入数组当前位置
+		arr[i]=arr[i][0].toUpperCase()+arr[i].slice(1);
+		}
+		//Step3:遍历结束后，返回数组拼接后的*句子*
+		return arr.join("");
+	}
+  </script>
+ </head>
+ <body>
+    
+<button onclick="alert(parseFirst(prompt('输入一句英文')))">首字母大写<button>
+ </body>
+</html>

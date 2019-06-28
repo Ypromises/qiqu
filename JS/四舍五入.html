@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+     function round(num,d){
+		 //math.round() -->只能四舍五入取整
+		 //比如:345.46 , 2
+		 //1.num*10的d次方
+		 num*=Math.pow(10,d);
+		 //2.将结果四舍五入
+		 num=Math.round(num);
+		 //3.return 返回结果
+		 return num/Math.pow(10,d);
+
+
+	 }
+	 console.log(round(345.456,2));//345.46
+	 console.log(round(345.456,-1));//350
+	 console.log(round(555.555,2));//555.56?
+	 
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

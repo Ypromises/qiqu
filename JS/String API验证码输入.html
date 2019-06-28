@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+    <script>
+	  /*
+	    在程序种保存一个固定的4位验证码
+		  请该用户反复输入
+		  只要输入不正确
+		     就提示用户 验证码输入错误，反复输入
+		  如果输人证券，提示“验证通过”
+	  */
+	  var code="4eAt";
+	  //1.定义input变量，接受用户输入的验证码
+	  /*var input=prompt("请输入验证码");*/
+	  var input="";
+	  //2.while（input!=code）
+	/*  while(input!=code){
+		  alert("验证码错误");
+		 input=prompt("请输入验证码");
+		 if(input=="exit"){alert("退出！");break;}
+	  }*/
+
+	  //.toUpperCase() 大小写转换
+	  while((input=prompt('请输入验证码：'+code)).toUpperCase()!=code.toUpperCase()){
+		  alert("验证码错误！");
+	  }
+	  
+	  //         提示用户“验证码错误”
+	  //3. 如果退出循环，提示“验证通过”
+	  //alert("验证通过");
+	  document.write('<h1 style="color:green">验证通过</h1>');
+
+
+
+	  /*请用户输入一句话：input
+	    遍历input中每个字符，
+		  将每个字符转为unicode号
+		  暂时存入一个数据arr中
+		  遍历解释后，将数组中每个号，拼成一个大字符串
+	  */
+	  function encode(input){
+         //遍历input中每个字符，同时声明空数组arr	
+		 
+		    for(var i=0,arr=[];i<input.length;i++){
+		 //将每个字符转为unicode号
+		   
+		   var unicode=input.charCodeAt(i);
+		/*   //如果unicode<100  -->"000"+unicode
+		   //比如：51-->00051
+		   if(unicode<100){
+			   unicode="000"+unicode;
+		   }
+		   //如果unicode<1000  -->"00"+unicode
+		  
+		   //比如：112-->00112
+		    if(unicode<1000){
+			   unicode="00"+unicode;
+		   }  arr.push(unicode);  */ 
+
+		   //暂时存入一个数组arr中
+		  arr.push((unicode+100000+"").slice(1));
+		   }
+		 //遍历结束后
+		    //将数组中每个号，拼成一个大字符串，（返回）
+			return arr.join("");
+	  }
+	</script>
+ </head>
+ <body>
+    <button onclick="document.write(encode(prompt('输入一句话')))">编码</button>
+ </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>计算器</title>
+ </head>
+ <body>
+   <script>
+      /*
+	    请用户输入单价，数量，收款金额
+		计算总价
+		如果总价>=500，则打八折
+		计算找零
+		输出：“应收：xxx；找零：xxx”
+	  */
+	  var price=prompt("输入单价");
+	  var count=prompt("输入数量");
+	  var money=prompt("输入收款金额");
+	  var total=price*count;
+	 // total>=500&&(total*0.8)
+	  //  var change=money-total;
+		if( total>=500){ 
+		   total=total*0.8;
+	     } 
+	  //如果给够钱
+	  if(money>=total){
+		  var change=money-total;
+		  alert("应收："+total+";找零："+change);
+	  }else{
+		  var change=total-money;
+		  alert("应收："+total+";还差："+change);
+	  }
+	
+   </script>
+ </body>
+</html>

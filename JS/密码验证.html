@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>密码验证</title>
+  <script>
+    /*
+	  请用户输入新密码pwd
+	  利用reg.test方法，验证pwd
+	  如果验证未通过，提示“密码必须6位数”
+	  如果验证通过，提示“密码修改成功”
+	*/
+   var reg=/^(?![a-z0-9]*$)(?![a-zA-Z]*$)[a-zA-Z0-9]{6}$/;
+   while(!reg.test(prompt('输入新密码：'))){
+	   alert("密码格式不符。\n密码要求：6密码，只能是字母，数字的组合，至少包含一位大写字母，至少包含一位数字");
+   }
+   document.write("密码修改成功");
+
+   var str="明明喜欢我，却不告诉我，别理我，我想静静；静静是谁？你先告诉我明明是谁";
+   var reg=/明明|静静/g;
+   /*
+      先找依次，判断结果是否为null
+	  如果不为null，就输出数组的第一个元素
+	      以及数组的index属性
+   */
+   var arr=null;
+   while((arr=reg.exec(str))!=null){
+	   console.log("在位置："+arr.index+"发现关键字；"+arr[0]);
+	   console.log("下次从："+reg.lastIndex+"开始找；");
+   }
+
+   
+
+  </script>
+ </head>
+ <body>
+  
+
+ </body>
+</html>

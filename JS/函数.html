@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+    <script>
+	  /* 打饭：
+	     取饭盒；
+		 走到食堂；
+		 找窗口打饭；
+		 回宿舍
+	  */
+	    function buy(what,money){
+			  console.log("取饭盒");    
+			  console.log("走到食堂");
+			  console.log("找窗口打饭"+what);
+			  console.log("刷卡，扣："+money);
+			  console.log("回宿舍");
+			  return ("香喷喷的"+what);
+		}
+		var eric=buy("鱼香肉丝",20);/*一次定义 反复使用*/
+		  console.log("eric得到"+eric);
+
+		var rose=buy("宫保鸡丁",18);
+		console.log("rose得到"+rose);
+
+		var smith=buy("糖醋里脊",22);
+		console.log("smith得到"+smith);
+	</script>
+ </body>
+</html>

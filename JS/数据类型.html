@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>数据类型</title>
+   <script>
+     /*声明变量 保存总价：1.6
+	   再声明变量，保存收款金额：2
+	   用程序计算找零，保存变量并输出*/
+	   var total=1.7;
+	   var money=2;
+	   var change;
+	   change=money-total;
+	   console.log(change.toFixed(2));/*将change中的小数按两位四舍五入*/
+	   /*笔试题*/
+	   var str="Hello"+"World";
+	      //结果：HelloWorld
+	   //共创建过几个字符串？ 3个
+   </script>
+   <script>
+      var n1=2,n2=3;
+	  var s1="2",s2="3";
+	  var b1=true,b2=false;
+	  console.log(n1+n2); //5
+	  console.log(String(n1)+s2); //23 String（x）隐式转换
+	  console.log(String(b1)+s2); //true3
+	  console.log(s1-b1); // 2-1  1
+	  console.log(s2-n1); // 3-2  1
+	  console.log(s2+n2+b1);//33true
+   </script>
+   <script>
+       /* 请输入用户薪资，保存在变量salary中*/
+	//   var salary=/*window.*/parseFloat(prompt("请输入薪资:"));
+	//   console.log(typeof(salary));
+	   /*将salary的薪资+1000*/
+	//   salary=salary+1000;
+	   /*输出薪资*/
+	//   console.log(typeof(salary));
+	//   alert("薪资是："+salary);
+   </script>
+   <script>
+     /*笔试题*/
+	 var n=2;
+	 var r=n++  +  ++n  +  n++;                    //  r=++n    +  n++   +   ++n //? 11
+          //2                                          //3
+		  //返回n=3 （不论前++还是后++，最后返回）     //返回n=3
+		          //4                                             //3
+				  //返回n=4                                       //返回n=4
+			// 2+4=6    +  //4                        3+3 =  6   +     //5
+						  //返回n=5                                           //返回n=5
+	 console.log(r);// r等于多少？  10     
+	 console.log(n);//5
+   </script>
+
+   <script>
+      /*请用户输入一个数，判断是奇数还是偶数*/  
+	  //输入一个数 保存坐在num中
+//	  var num=prompt("请输入一个数：");
+	  //判断是否是奇数 将结果保存在isOdd中
+//	  var isOdd=num%2==1;
+	  //判断是否是偶数，将判断结果保存自爱isEven中
+//	  var isEven=num%2!=1;
+	  //输出
+	  //是奇数么 true/false
+//	  console.log("是奇数么？"+isOdd);
+	  //是偶数么 
+//	   console.log("是偶数么？"+isEven);
+
+	   //判断用户输入的是为数字
+	   var input=parseInt(prompt("请输入一个数"));
+	   console.log("是数字吗"+!isNaN(input));
+   </script>
+
+ </head>
+ <body>
+ </body>
+</html>

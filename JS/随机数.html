@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>随机数</title>
+    <script>
+	     /*双色球：
+
+
+		    随机生成6个红球
+			随机返回1-33
+			红球不能重复
+
+			随机生成1个篮球：1-16
+		 */
+		 function doubleBall(){
+			 var reds=[];//保存生成的红球
+			 /*
+			   循环生成6个红球,reds.length<6
+			      随机生成一个1-33直接的整数
+				  如果reds中不包含该数字（indexOf()）
+				    才将输入追加到reds数组中
+				循环退出后：
+				在1到16直接随机生成一个篮球blue
+
+			 */
+			 while(reds.length<6){
+				 var n=parseInt(Math.random()*(33-1+1)+1);
+				
+			 }
+			 alert(reds+" | "+bule);
+		 }
+		 
+		 
+		 
+		 /*生成随机验证码
+		  将所有字符保存为连续的结构
+		  如何将每个字符放入数组
+		 */
+		 var chars=[];
+		 for(var c=48;c<=57;chars.push(String.fromCharCode(c++)));
+		 for(var c=65;c<=90;chars.push(String.fromCharCode(c++)));
+		 for(var c=97;c<=122;chars.push(String.fromCharCode(c++)));
+         //将'A'-'Z'存入chars
+		 //将'a'-'z'存入chars
+
+
+
+		 console.log(chars.length);//62
+
+
+
+		 //专门生成一个4位数的随机验证码
+		 function getCode(){
+
+			 for(var i=0,arr=[];i<4;i++){
+				 var n=parseInt(Math.random()*(61-0+1)+0);
+				 arr.push(chars[n]);
+			 }
+			 return arr.join("");
+		 }
+		 function valiCode(){
+			 //生成验证码code
+			 var code=getCode();
+			 //再输入字符串input
+			 //判断输入字符是否等于验证码
+			 while(prompt('输入验证码'+code).toLowerCase()!=code.toLowerCase()){
+				 alert("验证错误");
+				 code=getCode();//刷新验证码
+			 }
+			 //   只有 不等于 才提示验证码错误
+			 //  重新生成验证码放入code中
+			 document.write('<h1 style="color:green">验证通过</h1>');
+		 }
+	</script>
+ </head>
+ <body>
+    <button onclick="doubleBall()">机选</button>
+	<button onclick="valiCode()">验证码</button>
+ </body>
+</html>

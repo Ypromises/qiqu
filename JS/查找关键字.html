@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>查找关键字</title>
+  <script>
+    /*在程序先保存一个关键字；我
+	  请用户输入一句话
+	*/
+	var kword="no";
+	function findKwords(input){
+	//	var index=-1;  indexOf从前往后找
+		var index=input.length;//保留本次查找的位置
+	 // while((index=input.indexOf(kword,index+1))!=-1){
+		 while((index=input.lastIndexOf(kword,index-1))!=-1){
+			 //lastIndexO 从后向前找  先找，在判断，在输出位置
+			alert("在位置"+index+"发现敏感词");
+			if(index==0){//防止第一个字符就是关键字 死循环
+				break;
+			}
+		}
+	}
+
+  </script>
+ </head>
+ <body>
+      <button onclick="findKwords(prompt('输入回复'))">回复</button>
+ </body>
+</html>

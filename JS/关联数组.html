@@ -1,0 +1,51 @@
+
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>关联数组</title>
+  <script>
+    var fbb=[];
+	fbb['name']="范冰冰";
+	fbb['sex']="女";
+	fbb['yuweng']="70";
+	fbb['shuxue']="60";
+	fbb['eng']="80";
+	console.log("姓名："+fbb['name']);
+
+
+	/*笔试题*/
+	/*
+	  去除数组中重复的元素
+	  【1，2，3，4，5，5，3，4，5】
+	  【1，2，3，4，5】
+	  //依次遍历arr中的每个元素
+	  //将元素值作为key，value默认都取1，放入hash中
+	  //遍历结束后，输出hash内容
+
+	*/
+	 var arr=['1','2','3','3','4','5','5'];
+	 function arr(){
+		for(var i=0;i<arr.length;i++){
+			 for(var n=i+1;n<arr.length;n++){
+				 if(arr[n]==arr[i]){
+					 arr[n]=arr[i];
+				 }
+				 
+			 }
+           
+		 }
+		 console.log(arr);
+	 }
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+     <script>
+	   /*请用户输入一个成绩
+	     如果成绩不是数字 输出“你玩我啊”
+		 如果成绩>100或<0 则输出“超范围”
+	     如果成绩>=90 输出A
+		 如果成绩>=80 输出B
+		 如果成绩>=60 输出C
+		      否则    输出D
+	   */
+	   /*三目运算实现*/
+	/*   var score=prompt("请输入成绩");
+	   alert(
+	      isNaN(score)?"你玩我啊":
+		  score>100||score<0?"超范围":
+		   score>=90?"A":
+		   score>=80?"B":
+		   score>=80?"C":
+		             "D"
+	   );  */
+
+	   /*else if 实现*/
+	   var score=prompt("请输入成绩");
+	   if(isNaN(score)){
+		    alert("你玩我啊");
+	   }
+	   if(score>100||score<0){
+            alert("超范围");
+	   }else if(score>=90){
+		    alert("A");
+	   }else if(score>=80){
+		    alert("B");
+	   }else if(score>=60){
+		    alert("C");
+	   }else{
+		   alert("D");
+	   }
+	  
+	 </script>
+ </body>
+</html>

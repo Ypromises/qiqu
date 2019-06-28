@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>switch</title>
+  <script>
+     /*
+	    请用户输入一个数字
+		  如果输入1，执行查询操作
+		  如果输入2，执行取款操作
+		  如果输入3，执行转账操作
+		  如果输入0，退出
+		  否则，提示输入无效
+	 */
+	 /*循环三要素：
+	    循环条件：输入！=“0” --》继续循环的条件
+		循环变量：输入，每执行一次，用户都重新输入
+		循环体：请用户输入
+	 */
+	 var input="";
+	 while(input!="0"){
+         input=prompt("请按键")
+	 
+	 switch(input){
+		 case "1":
+		    alert("正在查询...");
+
+
+			break;
+		 case "2":
+		    alert("正在取款...");
+			break;
+		 case "3":
+		    alert("正在转账...");
+			break;
+		 case "0":
+		    alert("退出！");
+			break;
+		 default:
+		    alert("输入有误...");
+	 }
+ } 
+  </script>
+ </head>
+ <body>
+ </body>
+</html>

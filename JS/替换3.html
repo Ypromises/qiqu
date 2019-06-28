@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+   <script>
+      var str="纪委负责对全国党员干部的纪检监察工作";
+	//纪委  纪检  纪检监察
+	var reg=/纪[检委](监察)?/;
+	var count=0;
+	/*
+		先找一次，如果找到(!=null)
+		  先判断当前关键字的字符个数，再根据个数替换*
+		  count++;
+	*/
+	var arr=null;
+	/*while((arr=str.match(reg))!=null){
+		str=str.replace(reg,arr[0].length==2?"**":"****");
+		count++;
+	}*/
+	while((arr=reg.exec(str))!=null){
+		str=str.replace(reg,arr[0].length==2?"**":"****");
+		count++;
+	}
+	console.log(str);
+	console.log("共替换"+count+"处");
+
+	var pid="530222199708040569";
+	var birth=pid.slice(6,-4);
+	var reg=/(\d{4})(\d{2})(\d{2})/;
+	birth=birth.replace(reg,"$1年$2月$3日");
+	console.log(birth);
+	
+	var time="20151016143155";
+	//xx年xx月xx日 xx:xx:xx
+	var reg=/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/;
+	time=time.replace(reg,"$1年$2月$3日 $4:$5:$6");
+	console.log(time);
+
+	var lis="<li>eric<>\n\t<li>smith<><li>rose<>\t<li>john<> \t <li>scott<><li>tom<><li>jerry<>";
+	//将菜单项中的内容放入数组
+	//Step1：将lis从4位置到-5位置截取子字符串
+	lis=lis.slice(4,-5);
+	//Step2：按<>\s*<li>
+	var reg=/<\li>\s*<li>/;
+	var arr=lis.split(reg);
+	console.log(arr);
+	//[eric,smith,rose,john,scott,tom,jerry]
+
+	var html=  //先对数组排序
+	arr.sort().join("<li></li>");
+	document.write("<ul><li>"+html+"</li></ul>");
+   </script>
+  
+ </body>
+</html>

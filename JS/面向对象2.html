@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>面向对象2</title>
+  <script>
+      //this-->window
+	  /*this.*/ a=100;
+	  //window a=100
+	  (function(){
+		  var a=99;
+		  console.log(this.a);
+	  })();
+    
+	/*笔试题*/
+	var a=2;
+	function fun(){
+		console.log(this.a);
+
+	}
+	var c={a:3,fun:fun};
+	var p={a:4};
+	c.fun();//? 3
+
+    (p.fun=c.fun)();//?   2 
+	//赋值表达式的结果相当于等号右侧表达式的值
+
+	p.fun();//?  4
+
+	/*************************************************/
+	if(!("trim" in String.prototype)){
+	String.prototypr.trim=function(){
+
+		return this.replace(/^\s+|s+$/g,"");
+	}
+	}
+	var str="  Hello World ";
+	//如果str中没有trim方法，则自定义trim
+	str=str.trim();
+	document.write(str.replace(/ /g,"_"));//hello_world
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

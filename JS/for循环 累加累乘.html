@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>for循环 累加累乘</title>
+         <script>
+	/*	   var sum=0;
+		   for(var a=1;a<=100;a++){
+			   sum+=a;
+		   }  */
+           for(var a=1 ,sum=0;a<=100;sum+=a++);
+		   alert("结果="+sum);
+		   /*计算从1乘到100的值*/
+		   var r=1;//累乘的积
+		   var n=1;//乘数
+		   for(var n=2;n<=100;n++){
+			   r*=n;
+		   }
+		   alert("结果="+r);
+
+		   /*计算1 + 1/3 + 1/5 + 1/7.......+ 1/999
+		   三要素：
+		   1.循环条件：分母<=999
+		   2.循环变量：分母，每加一次分母+2
+		   3.循环体：将1/分母的值，累加到sum1中
+		   */
+		   var sum1=0;
+		   var m=1;// 分母初始
+		   for(var m=1;m<=999;m+=2){
+			   sum1+=1/m;
+		   }
+		   alert("结果="+sum1);
+
+		   /*定义函数，输出乘法口诀任意一行
+		   比如第三行：
+            1x3=3 2x3=6 3x3=9
+			循环中的变化：
+
+			假设用户输入行号1
+			定义一个str变量，保存子算式拼接成的一个字符串
+			三要素：
+			1.循环条件：乘数《=1
+			2.循环变量：乘数从 1开始 每次+1
+			3.循环体：拼子算式：乘数+"x"+1+"="+乘数*1
+			    将子算式拼接到str中
+
+		   */
+
+		    function fun(l){
+				for(var i=1, str="";i<=1;str+=i+"x"+l+"="+ i++*l+ " ");
+				console.log(str);		
+			}
+    /*    function fun(l){
+		var str="";
+		for(var i=1;i<=l;i++){
+			str+=i+"x"+l+"="+i*l+" ";
+		}
+		console.log(str);
+	}
+*/
+
+
+      function getLeapYears(year){
+		  /*定义变量b 存储输出的闰年个数
+		  从year开始，依次判断今后的每一年
+		  只要碰到闰年就输出 输出5个闰年
+		  */
+		  year=parseInt(year);
+		  for(var b=0;b<5;b==0?year++:year+=4){
+			   console.log("当前年份："+year);
+             if(year%4==0&&year%100!=0||year%400==0){
+				 console.log(year);
+				 b++;
+			 }
+		  }
+
+	  }
+		 </script>
+
+ </head>
+ <body>
+      <button onclick="fun(prompt('输入行号'))">打印成分口诀表指定行</button>
+	  <button onclick="getLeapYears(prompt('输入一个年份'))">获得5个闰年</button>
+ </body>
+</html>

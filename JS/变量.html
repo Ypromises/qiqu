@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>变量</title>
+ </head>
+ <body>
+   <script>
+  /*   var hotel="饮水机";
+       function rom(){
+		     var water="矿泉水";
+			 console.log(hotel);
+			 console.log(water);
+	   }
+	   rom();
+	   console.log(hotel);//饮水机
+	   console.log(water);//报错   */
+
+	   /*笔试题*/
+	    var a=100;
+		function fun(/*a*/){
+			  a++;
+			  console.log(a);
+		}
+		fun(a);//? 100  注释a 后 变为101
+		console.log(a);//?  10
+
+		function foo(){
+			  m=100;
+			  console.log(m);
+		}
+		foo();          //? 100
+		console.log(m); //? 100
+
+
+
+
+		function fun1(){
+			  console.log(1);
+		}
+		/***********************/
+		fun1();// 1 2
+
+		function fun1(){
+			console.log(2);
+		}
+
+		/*笔试题*/
+		var b=100;
+		function fun(){
+			 console.log(b);
+			 /*var*/ b=90;
+			 console.log(b);  //90
+		}
+		fun();  //? 90  
+		console.log(b);//? 100 如果不加var 输出90
+
+
+
+		/****************************************/
+		function buy(what,card){
+              card-=5;
+			  console.log("余额"+card);
+			  return "香喷喷的"+what;
+		}
+		var card=10;
+		var eric=buy("鱼香肉丝",card);//余额？ 5
+		console.log(card);//余额？ 10
+   </script>
+ </body>
+</html>

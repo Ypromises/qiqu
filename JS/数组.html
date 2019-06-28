@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>数组</title>
+    <script>
+	var week=["日","一","二","三","四","五","六"];
+	        //  0    1    2    3    4    5    6
+			week[100]=100;
+			console.log("共"+week.length+"个元素");
+			console.log(week);
+			week.length=7;
+            console.log(week);
+
+			for(var i=0;i<week.length;i++){
+				  week[i]="星期"+week[i];
+			}
+	/*week[0]="星期"+week[0];
+	week[1]="星期"+week[1];
+	week[2]="星期"+week[2];
+	week[3]="星期"+week[3];
+	week[4]="星期"+week[4];
+	week[5]="星期"+week[5];
+	week[6]="星期"+week[6];*/
+	console.log(week);
+
+	var n=100;
+	var m=n;//值传递，将n中的值复制一份给m
+	n++;
+	console.log(m);
+
+	var my=['包','包','包','包','包'];
+	var lp=my;
+	lp[0]=0;
+	console.log(my);//
+	my[1]=0;
+	console.log(lp);
+
+	/*请用户反复输入员工姓名
+	    没输入一个，就存入数组emps中
+		Step1:先定义一个空数组emps
+		      再定义一个变量i，保存现在存入的位置上
+			                   i从0开始
+		Step2:循环三要素
+		      1.循环条件：输入!="exit"
+			  2.循环变量：输入
+			  3.循环体：先请用户输入员工姓名
+			            判断用户输入不等于"exit"
+			            才将姓名存入i位置
+						i++
+		Step3:退出循环后，输出emps的内容
+	*/
+    var emps=[];
+	/*var i=0;*/
+	var input="";
+	while((input=prompt("请输入员工姓名"))!="exit"){  
+		     /*结果：用户输入内容*/
+			 /*赋值表达式的结果是等号右边的值*/
+			    emps[emps.length]=input;
+	}
+	 console.log(emps);
+
+
+
+	 /*定义一个函数，找出任意数组中的最大值
+	    先定义一个max变量，初始化为数组第一个元素
+		遍历数组，依次取出每个元素和max比较
+		  如果i位置元素>max,则替换max中的值
+	 */
+	   function getMax(arr){
+		  /* for(var i=0;i<arr.length;i++){
+               arr[i]<=arr[i+1];
+			   arr[i]=arr[i+1];
+			   return arr[i];
+		   }*/
+		  for(var i=1,max=arr[0];i<arr.length;i++){
+			  arr[i]>max&&(max=arr[i]);
+		  }
+		  return max;
+	   }
+       console.log(getMax([3,7,5,2]));
+	   console.log(getMax([13,307,55,26]));
+
+
+	   /*定义一个函数，查找指定值在数组中的位置下标
+	    遍历数组：
+		   如果当前元素==enme
+		    返回i,退出函数
+		   如果遍历结束没找到 返回-1
+	   */
+	    var emps=['Eric','John','Smith','Rose','Scoot','Tom'];
+		// indexOf:在数组中查找ename的位置
+		//没找到 返回-1
+		function indexOf(arr,ename){
+		/*  for(var i=0;i<arr.length;i++){
+               if(ename==arr[i]){
+				   break;   
+				   }
+				if(i==arr.length-1&&ename!=arr[i]){
+					return -1;
+				}
+			}
+			   
+			return i+1;  */
+
+			for(var i=0;i<arr.length;i++)
+
+
+               if(arr[i]==ename){
+				    return i   
+				   }
+          	} 
+				return -1;           
+		}
+		console.log(indexOf(emps,"Rose"));
+		console.log(indexOf(emps,"Eric"));
+		console.log(indexOf(emps,"Jom"));
+   </script>
+
+ </head>
+ <body>
+  
+ </body>
+</html>

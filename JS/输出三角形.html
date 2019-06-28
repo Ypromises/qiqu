@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>输出三角形</title>
+  <script>
+   /* 定义函数输出正三角*/
+    /*
+	    *
+	    **
+	    ***
+
+	    *****
+	    ******
+	*/
+	function printTriangle(a){
+		 for(var r=1;r<=a;r++){
+		      for(var i=0,str="";i<r;str+="*",i++);
+			       console.log(str);
+		 }
+	}
+    /*
+	  定义函数输出反三角
+	       *
+		  **
+		 ***
+	    ****
+	   *****
+	*/
+	function printTriangle1(b){//b行数 r 追踪b
+		/*输出三角中的任意一行
+		假设r=3 每行输出b-3个空格，之后都是*
+		三要素：
+		1.循环条件：字符个数<1
+		2.循环变量:字符个数，从0开始，每次+1 str=""，每次向其中拼一个字符
+		3.循环体：如果字符个数<(b-r)，拼空格否则拼*
+		*/
+		for(var r=1;r<=b;r++){
+		for(var i=0,str="";i<b;i++){
+			str+=i<(b-r)?" ":"*";
+		}
+		console.log(str);
+	}
+}
+
+  function printTriangle2(c){
+	  //输出等腰三角形
+	  c=parseInt(c);
+		for(var r=1;r<=c;r++){
+		for(var i=0,str="";i<c+r-1;i++){
+			str+=i<(c-r)?" ":"*";
+		}
+		console.log(str);
+	}
+}
+	</script>
+ </head>
+
+ <body>
+  <button onclick="printTriangle(prompt('输入行号'))">输出正三角</button>
+	<button onclick="printTriangle1(prompt('输入行号'))">输出反三角</button>
+	<button onclick="printTriangle2(prompt('输入行号'))">输出等腰三角</button>
+ </body>
+</html>

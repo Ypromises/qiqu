@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>继承2</title>
+  <script>
+     /**/
+	 function Flyer(fname,speed){
+		 this.fname=fname;
+		 this.speed=speed;
+		 this.fly=function(){
+				 console.log(this.fname+" 以时速 "+this.speed+"飞行")
+			 }
+	 }
+	 /*在定义一个飞机的构造函数，除包含飞行物的所有属性外，还有扩展属性*/
+	 function Plane(fname,speed,capacity){
+		 Flyer.call(this,fname,speed);//this 后面可以加所有调用的参数 必须加call
+		 this.capacity=capacity;
+		 delete this.fly;
+		 if(!Plane.prototype.fly){
+			 Plane.prototype.fly=function(){
+				 console.log(this.fname+" 搭载 "+this.capacity+"人，并以时速"+this.speed+"飞行")
+			 }
+		 }
+	 }
+	 var A380=new Plane("A380",1850,555);
+	 //1.创建空对象
+	 //2.调用Plane()
+	 //    先调用Flyer构造函数
+	 //    再添加capacity属性
+	 console.log(A380.fname);
+	 console.log(A380.speed);
+	 A380.fly();
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

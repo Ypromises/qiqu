@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>JS基础1</title>
+  <script>
+     document.write("hello nihao &lt;scirpt&gt;")//当前网页的写入
+  </script>
+ </head>
+ <body>
+  
+   <script src="1_first.js"> </script><br>
+   <button onclick="window.alert('三里清风三里路&nbsp;&nbsp;步步清风&nbsp;皆是你！')">click me!</button>
+   <!--当前窗口的警告框-->
+   <button onclick=" document.write('hello from onclick')">document me!</button>
+   <button onclick="console.log('hello from onclick')">console me!</button>
+   
+    <script>
+      document.write("<br>三里清风 <br>三里路");// 换行必须用<br>
+   </script>
+  
+  <script>
+     var burger="香辣鸡腿堡";;
+	 
+	 /*输出变量名保存的汉堡名称*/
+	 console.log(burger);
+	 /*声明一个变量drink，在变量保存一种饮料名称*/
+	 /*声明一个变量side，在变量保存一种配餐名称*/
+	 /*
+	 输出：菜单
+	 *** 豪华午餐***
+	 汉堡名称
+	 饮料名称
+	 配餐名称
+	 */
+
+    var menu ="菜单";
+	var drink="可乐";
+	var side="一人豪华午餐";
+	console.log(menu);
+	console.log(burger);
+	console.log(drink);
+	console.log(side);
+	box="包子";
+    console.log(box);
+
+  </script>
+    
+	<script>
+	/*只要碰到声明提前的问题，多要先提前，后判断输出*/
+	console.log(a);
+	var a=100;
+	console.log(a);
+	var a=200;
+	console.log(a);
+
+	/* console.log(b);//报错
+	b=10;
+	console.log(b);  */
+	</script>
+
+ <script>
+ /* 1角度=n/180弧度*/
+ /*30度角=？弧度*/
+ const PI=3.14;
+ var hd=30*PI/180;
+ console.log(hd);
+ //PI=1.14;
+// hd=30*P1/180;
+ //console.log(hd);
+ </script>
+ </body>
+</html>

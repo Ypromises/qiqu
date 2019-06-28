@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+    <script>
+	   document.write(typeof("Hello"));//string
+	   document.write(typeof(123)+"<br>");//number
+	   document.write(typeof({a:1})+"<br>");//object
+	   document.write(typeof([])+"<br>");//object
+	  
+	   //如果当前浏览器的Array构造函数对象中不包括isArray
+	   if(!Array.isArray){
+		   //为Array构造函数添加isArray方法
+		   Array.isArray=function(obj){//4种
+			   //判断obj是不是数组类型
+			//   return Array.prototype.isPrototypeOf(obj);
+
+			//instanceof 构造函数名 判断obj对象是否被构造函数创建
+			return obj instanceof Array;
+
+			//
+
+		   }
+	   }
+       document.write(Array.isArray([])+"<br>");//true
+	   document.write(Array.isArray({})+"<br>");//false
+	   document.write(Array.isArray("Hello")+"<br>");
+	   
+	</script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>二维数组</title>
+  <script>
+   var provs=["北京市","河北省","云南省"];
+   var cities=[
+         ["朝阳区","东城区","西城区"],
+		 ["唐山","保定","石家庄"],
+		 ["昆明","昭通","红河"]
+   ];
+   function getCities(prov){
+	   //indexOf方法，找到返回数组下标，找不到返回-1
+	   var i=provs.indexOf(prov);
+	   if(i!=0){
+		   alert(cities[i]);
+	   }else{
+		   alert("没找到");
+	   }
+   }
+
+   var date=[
+      [2,4,2,4],
+	  [4,2,0,2],
+	  [2,4,4,2],
+	  [3,2,1,0]
+   ];
+   /*如何判断所以格子都满了
+     遍历data的每一行得一个元素
+	 只要发现一个元素==0
+	    返回false
+	 遍历正常结束，返回true
+   */
+   function isFull(){
+	   for(var r=0;r<4/*date.length*/;r++){
+		   for(var c=0;c<4/*date[r].length*/;c++){
+			   if(date[r][c]==0){
+				   return false;
+			   }
+		   }
+	   }
+	   return true;
+   }
+    console.log(isFull());//false
+
+
+
+	/*判断游戏是否结束
+	   如果不满，直接返回false
+	     遍历每个元素：
+		   如果c!=?(才检查右侧元素)
+		      如果当前元素==右侧元素，返回false
+		   如果r!=?（才检查下方元素）
+		      如果当前元素==下方元素，返回false
+	   如果遍历正常结束，返回true
+	*/
+	function isGameOver(){
+		if(!isFull()){return false;}
+		for(var r=0;r<4;r++){
+			for(var c=0;c<4;c++){
+				if(c!=3){
+					if(data[r][c]==data[r][c+1]){
+						return false;
+					}
+				}
+				if(r!=3){
+					if(data[r][c]==data[r][c+1]){
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+   console.log(isGameOver());
+  </script>
+ </head>
+ <body>
+     <button onclick="getCities(prompt('输入省份'))">查找城市</button>
+ </body>
+</html>

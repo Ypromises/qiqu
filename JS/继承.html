@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>继承</title>
+  <script>
+    function Student(sname,age){
+		this.sname=sname;
+		this.age=age;
+		if(!Student.prototype.intrSelf){
+			Student.prototype.intrSelf=function(){
+				alert("I'm"+this.sname+",I'm"+this.age);
+			}
+		}
+	}
+	var father={car:"BMW",balance:10000000};// 继承 父级
+
+	//	Student.prototype=father;
+
+	var lilei=new Student("Li Lei",12);
+
+	var hmm=new Student("Han Meimei",11);
+	
+	var hmm1=Object.create(father,
+	{  intrSele:{value:intrSelf},
+		toString:{value:toString}
+	}
+	);
+
+	/*重写*/
+	function intrSelf(){
+		alert("我是"+this.sname+",今年"+this.age);
+	}
+	function toString(){
+		return "(sname:"+this.sname+",age:"+this.age+")";
+	}
+
+	hmm.sing=function(){
+		console.log("你是我的小可爱！")
+	}
+
+    console.log(lilei.toString());
+	console.log(hmm.toString());
+	console.log(hmm.sing());
+	//var father={car:"BMW",balance:10000000};
+
+	
+
+	Object.setPrototypeOf(hmm1,father);
+	console.log(hmm1.car);
+    //console.log(lilei.car);
+  </script>
+ </head>
+ <body>
+   <button onclick="lilei.intrSelf()">李雷的自我介绍</button>
+   <button onclick="hmm.intrSelf()">韩梅梅的自我介绍</button>
+
+ </body>
+</html>

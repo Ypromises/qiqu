@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>找最大</title>
+   <script>
+      function getMax(a,b,c){
+		  var max=parseFloat(a)>parseFloat(b)?a:b;
+		  //如果c>max 再放入c
+		  parseFloat(c)>parseFloat(max)&&(max=c);
+		  return max;
+	  }
+
+   </script>
+ </head>
+ <body>
+       <button onclick="alert(getMax(prompt('第一个数'),prompt('第二个数'),prompt('第三个数')))">找最大</button>
+ </body>
+</html>
