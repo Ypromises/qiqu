@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>块模型</title>
+  <style type="text/css" >
+  /*  div {
+	width:200px;
+	height:200px;
+	border:2px solid black;
+	}
+	#d1{
+	border-color:red;
+	margin:10px; /* 外边距 一个值：上下左右，两个值：上下，左右;三个值： 上 左右 下*/
+	/*padding:20px;/* 会将元素撑大 D1的实际宽度为：200+20*； padding取值不能为负，没有auto 其他和margin一样/
+	}
+	#d2{
+	border-color:green;
+	/* margin:10px 30px 20px;  */
+	/*margin:10px auto;/* margin 取值为负 反方向移动， 当左右margin为 auto 时 自动调整也就是左右对齐居中*/
+	/*margin-right:0;/*左边是margin：auto时，此时right为0,左边会把框挤到右边 当上下margin相遇时 较大的值生效
+	}  */
+
+   #div div{
+   width:200px;
+   height:200px;
+   border:2px solid black;
+   margin-bottom:10px;
+   }
+   #d1{
+      /* background-image:linear-gradient(180deg,green,red);/* background-image:linear-gradient(180deg,green,red)
+	  渐变色 180deg 渐变程度*/
+	  background-image:linear-gradient(to bottom,yellow 30px,red 90px,white 160px,green 200px);
+   }
+  #d2{
+     /* background-image:radial-gradient(100px at center,yellow,red);/*center是位置 也可以写为 50px 20px*/
+	  border-radius:100px;
+      background-image:radial-gradient(200px at right top,white,#004477);
+	  border:none; 
+
+  }
+  #d3{
+  background-image:repeating-linear-gradient(to top,red 0%,yellow 20%);/* repeating 重复*/
+     
+  }    
+
+
+
+	#ping{
+	      width:838px;
+		  min-height:50px;
+		  padding:10px 15px 5px;
+		  border:1px solid #d0e4c2;
+		  border-radius:10px;
+	}
+	#ping_page a{
+     	margin:2px;
+	    border:1px solid #ccc;
+	    padding:3px 10px;
+	    border-radius:5px;
+	}
+	#ping_page{
+	   margin-top:10px;
+	   text-align:right;
+	}
+	#ping_page .current{
+	   border:none;
+	   padding:4px 11px;
+	}
+    #ping_page a:hover{
+	background:#005aa0;
+	color:#fff;
+	
+	}
+	#ping_page .current:hover{
+	background:transparent;
+	color:#000;
+	}
+  #ping_text b{
+      padding:7px 5px;
+	  margin-right:5px;
+	  background:#fdedd2;
+	  border-radius:10px;
+  }
+  #ping_btn input{
+      width:80px;
+	  padding:10px;
+	  border:1px solid #d5d5d5;
+	  color:#333;
+	  margin-right:10px;
+	  background-image:linear-gradient(to bottom,#fafafa,#ccc);
+	  
+  }
+    #ping_btn{text-align:right;
+	}
+	
+
+  #ping_btn {
+   margin:30px 0 20px;
+  
+  }
+  body{
+   font:12px;
+   Arial,Verdana,"\5b8b\4f553";
+   color:#666;
+  }
+  #ping {
+      line-height:21px;
+	  
+  }
+  #ping_text p span{
+       color:#9c9a9c;
+	   font-family:simsun;
+	   font-size:13px;
+	   
+  }
+ #ping_text p span .space{
+       letter-spacing:2em;/*字间距*/
+ }
+   #ping_t input{
+      color:#333;
+	  font-weight:normal;
+   }
+  </style>
+ </head>
+ <body>
+  <!--  <div id="d1">div的内容</div> 
+	<div id="d2">div的内容</div> 
+	<div id="d3">div的内容</div> -->
+
+  <h1 align="center">练习：评论模块</h1>
+   <div id="ping"/>
+       <div id="ping_kuang"/>
+	      <div id="ping_star">
+		      <div id="stars"></div>
+	     </div>
+	          <div id="ping_text">
+			    <p><span><a class="space">标</a>签：</span>
+			      <b>比洗衣粉好</b>
+				  <b>去污能力强</b>
+                </p>
+				<p><span><a class="space">心</a>得：</span>
+				  买几次了，挺好用的，洗衣服很干净！
+			    </p>
+				<p><span>购买日期：</span>
+				   2019-3-5
+				</p>
+		</div>
+		      <div id="ping_btn">
+			     <input type="button" value="有用(3)"/>
+				 <input type="button" value="回复(3)"/>
+			  </div>
+       </div>
+	   <div id="ping_page" />
+	     <a class="current">1</a>
+		 <a href="#">2</a>
+		 <a href="#">3</a>
+		 <a href="#">4</a>
+		 <a href="#">5</a>
+		 <a href="#">6</a>
+	   </div>
+   </div>
+
+
+    <h1 align="center">渐变色</h1>
+	<div id="div">
+       <div id="d1">线性渐变</div> 
+	   <div id="d2">径向渐变</div> 
+	   <div id="d3">div的内容</div> 
+     </div> 
+  
+ </body>
+</html>

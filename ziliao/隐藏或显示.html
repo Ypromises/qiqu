@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>隐藏或显示</title>
+<script >
+function isHidden(oDiv){
+var vDiv = document.getElementById(oDiv);
+vDiv.style.display = (vDiv.style.display == 'none')?'block':'none';
+}
+</script>
+</head>
+<body>
+<div style="cursor:hand" onclick="isHidden('div1')"><b>调查内容:</b></div>
+<div id="div1" style="display:none">隐藏的内容</DIV>
+ </body>
+</html>

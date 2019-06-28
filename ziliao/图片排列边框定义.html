@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>图片滚动排列</title>
+ </head>
+ <body>
+
+  <style type="text/css">
+      .chuchuang{
+	  overflow-x:auto;
+	  overflow-y:hidden;
+	  border-top:3px dashed green; 
+	  border-left:2px solid red;
+	  border-bottom:2px dotted blue;
+	  border-radius:100px;
+	  border-radius:50px 20px;
+	/*  border-radius:50px 20px 0 100px;/* 四个角顺时针数*/ 
+	  border-right:2px solid purple; /*--没有右边框 或者border-right:none 直接没有 /border-bottom:transparent 透明*/
+	       }
+
+		   .chuchuang p{
+		   width:800px;
+		   }
+		   .chuchuang img{
+		   width:100px;
+		   border:1px solid #ccc;
+		   border-radius:6px;
+		   }
+		   .chuchuang img:hover{
+		   box-shadow:5px 5px #ddd;
+		   }
+		 .chuchuang  .current{
+		   border:2px solid #e4393c;
+		   }
+   #d1{
+    box-shadow:5px 5px 5px #999;/* 设置边框阴影 水平偏移 垂直偏移 模糊 颜色 如果没有定义颜色 就和字的颜色一样*/
+   }
+   
+   #d2{
+     box-shadow: 0px 0px 5px 2px black; /*inset;/* 周围阴影的话 水平垂直偏移为0 但是由于看不清 第四个值为扩展 最后一个为颜色
+	 在color后面加inset 阴影会出现在边框内部*/
+   }
+
+   #d3{
+
+   }
+    input{
+	outline:none; /* 可以用于去掉谷歌默认的表单元的蓝边。outline:0/none 属性 width style color*/
+	}
+
+   </style>
+   
+    <div class="chuchuang" style="  width:500px ; height:150px; ">
+	<!-- solid 实线 dashed虚线 dotted 点线-->
+	  <p>
+	    <img src="image/1.jpg" width="100px" height="100px">
+	    <img src="image/2.jpg" width="100px" height="100px">
+	    <img class="current" src="image/3.jpg" width="100px" height="100px">
+	    <img src="image/4.jpg" width="100px" height="100px">
+	    <img src="image/5.jpg" width="100px" height="100px">
+	    <img src="image/6.jpg" width="100px" height="100px">
+	  </p>
+	</div>
+      
+     <h2 align="center">边框阴影</h2>
+	  <div id="d1" style=" width:200px;height:200px;border:2px solid red;"></div></br>
+	  <div id="d2" style=" width:200px;height:200px;border:2px solid red;"></div></br>
+	  <div id="d3" style=" width:200px;height:200px;border:2px solid red;"></div>
+	  <input type="text" style="width:500px;height:100px;">
+ </body>
+</html>

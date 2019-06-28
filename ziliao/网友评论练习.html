@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title> 网友评论</title>
+   <style type="text/css">
+     body{
+	    font:12px Arial,Verdana;
+		color:#666;
+	 } 
+	 #taolun{
+	    width:100%;
+		height:393px;
+		background:url(image/) repeat-x 0 -41px;
+	 }
+    .tabs{
+	   height:30px;
+	   border-left:1px solid #dedfde;
+	   border-right:1px solid #dedfde;
+	}
+	#taolun_list td{
+	  border-bottom:1px dotted #deddde;
+	  padding:6px 0;
+      text-align:center;
+	  color:#9c9a9c;
+	  height:18px;
+	}
+	#taolun_list .tl_th {
+	   height:18px;
+	   border-bottom:1px solid #dedfde;
+	   font-weight:bold;
+	   color:#666;
+	}
+	#taolun_list {
+	    width:100%;
+	    border-bottom:1px solid #dedfde;
+	   
+	}
+    #taolun_list .left{
+	   text-align:left;
+	}
+    #taolun_list a {
+	   color:#005aa0;
+	   padding:6px;
+	   text-decoration:none;
+	    }
+	#taolun_list a:hover{
+	    text-decoration:underline;
+	} 
+	.shai,.lun{
+	    padding:2px 10px 3px;
+		background:url(image/1.jpg) no-repeat -110px -220px;
+	}
+	.lun{
+	     background-position: -252px -220px;
+	}
+	 ul.tabs{
+	  margin:0;
+	  padding:0;
+	  list-style:none;/*去掉列表的项目符号*/
+	 }
+	  .tabs li{
+	  float:left;/*让li在同一行*/
+	  font:14px "微软雅黑";
+	  width:96px;
+	  height:32px;
+	  line-height:34px;
+	  text-align:center;
+	  }
+     .tabs li a{
+	  color:#005aa0;
+	  text-decoration:none;    
+	 }
+	 .tabs li a:hover{
+	  color:#e4393c;
+	 }
+	 .tabs .current{
+	   background:#fff;
+	   height:34px;
+	   border-top:2px solid #e4393c;
+	   border-left:1px solid #ddd;
+	   border-right:1px solid #ddd;
+	   margin-top:-4px;
+	   padding-bottom:2px;
+	   margin-left:-1px;/*当current在第一个时 左移挡住左边的竖线  不影响第二个第三个tabs*/
+
+	 }
+	 .tabs .current  a{
+	   color:#e4393c;
+	 }
+   </style>
+
+ </head>
+
+ <body>
+     <div id="taolun">
+	    <ul class="tabs">
+		   <!--使用ul的规则 里面只能嵌套子ul或者是li-->
+		      <li class="current"><a href="#">网友讨论帖</a></li>
+			  <li class="current"><a href="#">晒单贴</a></li>
+			  <li><a href="#">问答贴</a></li>
+			  <li><a href="#">圈子贴</a></li>
+			  <li><a href="#">讨论帖</a></li>
+		   </ul>
+		    <table id="taolun_list" class="tl_list">
+			    <tr > 
+				    <td class="tl_th left">主题</td>
+					<td class="tl_th" width="100px">回复/浏览</td>
+					<td class="tl_th" width="100px">作者</td>
+					<td class="tl_th" width="130px">时间</td>
+				</tr>
+				<tr> 
+				    <td class="left"><i class="lun"></i><a href="#">好大一场雪,不错</a></td>
+					<td><a href="#">2001年冬天</a></td>
+					<td><a href="#">仙女</a></td>
+					<td><a href="#">2002-3-2</a></td>
+				</tr>
+				<tr> 
+				   <td class="left"><i class="shai"></i><a href="#">好大一场雪,不错aaa</a></td>
+					<td><a href="#">好美</a></td>
+					<td><a href="#">仙女姐姐</a></td>
+					<td><a href="#">2002-3-2</a></td>
+				</tr>
+				<tr> 
+				   <td class="left"><i class="lun"></i><a href="#">好大一场雪,不错</a></td>
+					<td><a href="#">我喜欢</a></td>
+					<td><a href="#">仙女</a></td>
+					<td><a href="#">2002-3-2</a></td>
+				</tr>
+				<tr> 
+				    <td class="left"><i class="shai"></i><a href="#">好大一场雪,不错，嘤嘤嘤</a></td>
+					<td><a href="#">2001年冬天</a></td>
+					<td><a href="#">仙女</a></td>
+					<td><a href="#">2002-3-2</a></td>
+				</tr>
+			</table>
+	 </div>
+  
+ </body>
+</html>

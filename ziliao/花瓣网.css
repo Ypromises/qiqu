@@ -1,0 +1,161 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+.header {
+    padding: 120px;
+    text-align: center;
+    background:url(image/13.jpg);
+	background-size:100% 100%;
+    color:black ;
+   
+}
+.header h1 {
+	/* 标题字体加大 */
+    font-size: 40px;
+  }
+
+.nav{ 
+  position: fixed;
+  left:0px;
+  width:100%;
+  height:100px;
+  top:0px;
+  z-index:99;
+}
+
+}
+#top_left{
+	left: 0px;
+	top:0px；
+	color:#000;
+	
+	/*bottom: 0px;/*距离界面下边距离*/    
+}
+#top_right{
+position: absolute;
+	  right:0px;
+	  top:0px;
+
+}
+#deng{
+
+	 right:50px;
+	 top:0px;
+     background-color:white;	 
+}
+#zhu{
+
+	 right:0px;
+	 top:0px;
+     background-color:red;	 
+}
+
+#deng:hover{
+    transform:scale(1.2);
+}
+#zhu:hover{
+    transform:scale(1.2);
+}
+
+.guanzhu{
+   height:50px;
+   text-align:center;
+   line-height:100%;
+}
+.guanzhu .line{
+   display:inline-block;
+   color:red;
+   width:45%;
+   border-top: 1px solid silver;
+}
+.guanzhu .txt{  
+   color:silver;
+   vertical-align:middle;
+}
+
+
+#image{
+     /*overflow 属性规定如何处理不符合元素框的内容,
+     hidden溢出内容会被隐藏，但是浏览器不会显示供查看内容的滚动条,srcoll为滚动条，auto为自动*/
+     overflow: hidden;
+	 height:170px;
+	 border-radius:10px;
+}
+#image img:hover{
+box-shadow: 0px 0px 5px 4px #ddd;
+}
+
+#image a:hover {
+    /* 鼠标移动到链接的颜色 */
+    background-color: white;
+    color: blue;
+        }
+.img1,.img2,.img3,.img4{
+margin-left:4%;
+}
+
+.tuijian{
+   height:50px;
+   text-align:center;
+   line-height:100%;
+}
+.tuijian .line1{
+   display:inline-block;
+   color:red;
+   width:46%;
+   border-top: 1px solid silver;
+}
+.tuijian .txt1{  
+   color:silver;
+   vertical-align:middle;
+}
+
+.center{
+  width:100%;
+  height:850px;
+  overflow: hidden;
+  border-radius:10px;
+}
+.div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10,.div11,.div12,.div13,.div14,.div15,.div16{
+ margin-left:1.59%;
+ margin-top:5px;
+}
+.div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10,.div11,.div12,.div13,.div14,.div15,.div16 :hover{
+   cursor:pointer;/*光标显示为手型*/
+  
+}
+.center img{   /* 鼠标上去会变亮*/
+  opacity:1;
+  filter(alpha=100);
+}
+.center img:hover{
+  opacity:0.7;
+  filter(alpha=70);
+}
+#footer{
+   width:100%;
+   height:300px;
+}
+.x{
+   height:250px;
+}
+.dixian{
+   height:50px;
+   float:bottom;
+   line-height:50px;
+   background:#eee;
+}
+.jiazai{
+  color:#999;
+  width:40%;
+  margin:0 auto;
+  line-height:40px;
+  background:#eee;
+  border:1px solid #ddd;
+  font-size:16px;
+  
+}
+input:focus{
+   outline:0;
+}

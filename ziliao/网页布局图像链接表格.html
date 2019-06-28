@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content=""
+  <meta name="Description" content="">
+  <title>网页布局</title>
+ </head>
+ <body>
+ <!--相对路径 -->
+  <img src="image/1.jpg" width="500px" height="400px" alt=""> 
+  <img src="image/2.jpg">
+  <img src="3.jpg" width="100px" height="100px" alt="这是个美女" title="美女"> 
+  <!--<img src="1.jpg" 表示在同一级目录   alt 是替代的意思 当图片不在了 用alt里的信息替代 title也是替代的意思 图片不在title里信息会显示
+      <img src="image/1.jpg" 表示在同目录的子目录中
+	  <img src="../image/1.jpg" 表示在上一级目录中 如果在上一级在加个../
+  -->
+  <!-- 绝对路径--  http://www.souhu.com/image/1.jpg
+  x协议名+主机名+目录结构+文件名
+  -->
+
+ <p>
+     <a href="http://www.baidu.com" target="_blank" title="这是一个链接">
+ 点击打开链接</a></p>
+ <p><a href="image/2.jpg" target="_blank" title="这是一个链接">
+ 点击打开链接</a>
+ <!-- 链接对象可以是图片 网址 音乐等等-->
+   <a href="mailto:senioa@126.com?subject=我要请老师吃饭">发邮件</a>
+
+   <!--锚点链接-->
+   <a href="#poem">跳转到诗</a>
+   <a href="#song">跳转到歌</a>
+   
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><a name="poem">这是一首诗</a></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p id="song">这是一首歌</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+<table border="1" width="600px" height="400px" cellspacing="10"
+  cellpadding="0px"  align="center"  >
+<!--cellspacing单元格与边框间距--cellpadding内容与单元格的间距 默认情况下，背景图会自动平铺重复--background="2.jpg,bgcolor="red" 背景图与背景颜色-->
+
+  <thead>
+  <caption>这是表标题</caption>
+   <tr height="30px" align="center">
+    <!--行-->
+	<td height="50px" width="400px" align="right" valign="top">这是表头部分1</td><!--列--
+	align水平对齐方式，valign垂直对齐方式--  用thead,tbody,tfoot,对表格进行分组，thead表头，tbody表主体，tfoot表尾 ， 分组后，跨行列不能跨区-->
+	<th>这是th</th>
+	<th>这是th</th>
+   </tr></thead>
+  <tbody>
+   <tr>
+    <td colspan="3">4</td>
+	
+  </tr>
+   <tr>
+    <td>  <!--嵌套表格-->
+	    <table width="100%" height="100%" bgcolor="red" border="1">
+		  <tr>
+		     <td></td>
+			 <td></td>
+		  </tr>
+		</table>
+	</td>
+	<td></td>
+	<td></td>
+  </tr></tbody>
+   <tfoot>
+  <tr>
+    <td></td>
+	<td></td>
+	<td></td>
+  </tr></tfoot>
+</table>
+</br>
+ <p align="center">跨行跨列表格实现</p>
+ <table border="1" bordercolor="black" width="400px" height="300px" cellspacing="0" align="center">       
+<tr>
+    <td colspan="2"></td> <!-- colspan表示跨列，2表示占两列，此情况就需要删掉一列 不然最后一列会被挤出去 多出一列-->
+	<td></td>
+	
+  </tr>
+  <tr>
+    <td rowspan="2"></td><!-- rowspan表示跨行，2表示占两行，此情况就需要删掉第三行的第一列  挤出来的那个单元格-->
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td></td>
+	<td></td>
+	<td></td>
+  </tr>
+ </table>
+
+    <p align="center">跨行跨列表格练习</p>
+	<table width="300px" height="300px"bordercolor="black" border="1" cellspacing="0" align="center">
+	  <tr>
+        <td colspan="2"></td>
+	    <td rowspan="2"></td>
+      </tr>
+      <tr>
+        <td rowspan="2"></td>
+	    <td></td>
+      </tr>
+      <tr>  
+	    <td colspan="2"></td>
+	    
+      </tr>
+	</table>
+
+  
+ </body>
+</html>

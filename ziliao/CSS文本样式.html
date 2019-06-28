@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>css文本样式</title>
+    <style>
+	  a{
+	     font-family:"微软雅黑";
+		 font-size:16px;
+		 font-weight:bold;/*加粗 bold/值（100，200）*/
+		 font-style:italic;/*斜体字*/
+		 font:/*将样式合在一起写，中间用逗号*/
+	  }
+	  div{
+	    font-family:Arial,/*"微软雅黑","楷体",*/"宋体";
+		/*定义font-family时，如果是中文就用中文，数字或英文就用英文,一般有(Arial,Times)*/
+		
+	  }
+	  div span{
+	   font-family:Times;
+	   font-variant:small-caps;/*小号大写字母*/
+	  }
+
+
+	  #div div{
+	    width:200px;
+		height:200px;
+		border:1px solid black;
+		
+	  }
+	  #div #d1{
+	    width:600px;
+		height:40px;
+	    text-align:center;
+	    color:green;
+		line-height:40px;
+		font:bold 18px/40px "微软雅黑";/**/
+		text-shadow:1px 1px 1px #ccc;/*文字阴影，一般偏移最大为两像素*/
+		
+	  }
+	  #div #d4{
+	  width:50px;
+	  height:50px;
+	  border:3px solid blue;
+	  margin:0 auto;/*div中的框要居中 要用margin*/
+	  }
+	  #d2{
+       text-align:center;
+	  }
+	  #d3{
+	     line-height:25px;/*如果是多行文字，增加line-height可以增加行距，如果是单行文字，设置line-height的
+		 值等于heightde值，可以让文字垂直居中*/
+		 text-indent:2em;/*首行文本缩进，可以用em做单位为字数，如果多段落要缩进，则段落前要加<p>标记*/
+	  }
+
+
+	  #lianxi div{
+	    width:200px;
+		height:200px;
+		border:1px solid black;
+		
+	  }
+	  #lianxi #lian1{
+	      overflow:hidden;
+	     white-space:nowrap;/*nowrap文字不换行 normal 正常*/
+		 text-overflow:ellipsis;
+	      /*clip 裁剪 ellipsis在隐藏部分之前显示...，只对横向溢出有效*/
+		 word-wrap:break-word;/*noraml:正常，长单词不换行,break-word:长单词不换行*/
+		 word-break:break-all;/*keep-all 长单词不换行 break-all 无视单词，随意换行*/
+	  }
+	</style>
+ </head>
+ <body>
+   <div>
+     <a>这是一段文字，</a>猜猜看它是什么样的？</br>
+	 This is a English Text</br>
+	  <span>This is a English Text too</span>
+   </div></br></br></br>
+  <div id="div">
+   <div id="d1">这是DIV1一段文字</div>
+   <div id="d2">这是DIV2一段文字
+     <div id="d4">字</div></div>
+   <div id="d3">这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文一段文字这是DIV3一段文字这是DIV3一段文字
+   <p>这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字这是DIV3一段文字</p>/div>
+  </div></br></br></br></br></br></br></br></br></br></br></br>
+
+ 
+  <h1 align="center">练习</h1>
+<div id="lianxi">
+   <div id="lian1">这是DIV1一段文字这是DIV1一段文字这是DIV1一段文字这是DIV1一段文字这是DIV1一段文字
+   This is a longlong longlognlong English word</div>
+   <div id="lian2">这是DIV2一段文字</div>
+   <div id="lian3"></div>
+  </div>
+
+ </body>
+</html>

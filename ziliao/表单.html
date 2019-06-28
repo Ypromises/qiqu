@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>表单FORM的作用</title>
+ </head>
+ <body>
+       <h1>欢迎登录</h1>
+	     <form>
+		   用户名：<input type="text" name="username" value="" size="20" maxlength="20" required/></br> 
+		   <!--size里的20表示是20个字符的长度，文本宽度 
+		       name  ：为input命名，
+		       value ：为按钮的文字/文本框的初始值
+			   maxlength  ：为最大字符数
+			   disabled  :  不可以提交/禁用
+			   readonly  ： 只读不可以写
+			   required  : 必须填写-->
+		   密&nbsp;&nbsp;&nbsp; 码：<input type="password" name="psw" value="请填写密码"/> </br> 
+		   <input type="submit" value="登录" />
+		 </form>
+
+
+        <h2 align="center">练习:修改个人信息</h2>
+		  <form name="form1" method="post" >
+		     <!--method是表单提交方式 ,get是讲表单信息显示在地址栏里 默认提交方式
+		     post是讲表单里的数据打包发送，适合大数据和需要安全保密数据
+			 enctype=""是需要提交附件的才定义 一般的表单用默认方式--action="data/user.jsp"  ,会弹出消息框动作-->
+		     <table align="center" bordercolor="black" border="1px" width="800px"  cellspacing="0">
+			     <tr>
+				     <td height="40px" width="20%">姓名：</td>
+                     <td><input type="text" name="name"/></td>
+				 </tr>
+				 <tr>
+				     <td height="40px">性别：</td>
+                     <td> <input type="radio" name="sex" value="man" checked/>男  
+					 <!--单选框必备属性，type、name（组名 同一组相同）、value（选项值）checked默认选项-->
+					     <input type="radio" name="sex" value="woman"/>女
+					 </td>
+				 </tr>
+				 <tr>
+				     <td height="40px">爱好</td>
+                     <td>  
+					     <input type="checkbox" name="music" >音乐</input>
+						 <input type="checkbox" name="art"   >电影</input>
+						 <input type="checkbox" name="sport" >运动</input>
+						 <input type="checkbox" name="art" >美术</input>
+						 <input type="checkbox" name="swimming" >游泳</input>
+						 <input type="checkbox" name="game" >游戏</input>
+					 </td>
+				 </tr>
+				 <tr>
+				     <td height="40px">学历：</td>
+                     <td>
+					    <select name="xueli">
+						  <option value="permioy"  selected>小学</option>
+						  <!--selected默认选中-->
+						  <option value="chuzhong">初中</option>
+						  <option>高中</option>
+						  <option>专科</option>
+						  <option>本科</option>
+						  <option>硕士</option>
+						  <option>博士</option>
+						  <option>其它</option>
+
+						  
+						</select>
+					 </td>
+				 </tr>
+				 <tr>
+				     <td height="40px">意向工作城市：</td>
+                     <td><select name="city" multiple  size="3">
+					      <!-- multiple允许多选， size表示显示的行数-->
+						  <option value="BeiJing">北京</option>
+						  <option value="shanghai">上海</option>
+						  <option value="chengdu">成都</option>
+						  <option value="zhejiang">浙江</option>
+						  <option>广东</option>
+						  <option>江苏</option>
+					 </td>
+				 </tr>
+				 <tr>
+				     <td height="40px">个人描述：</td>
+                     <td>    <!--textarea多行文本框，cols列数如下40字符长，rows行数如下8字符长--> 
+					    <textarea  name="descrip" cols="40" rows="8">
+	
+						 你今天真好看！
+						</textarea>
+
+					 </td>
+				 </tr>
+				 <tr>
+				    <td height="40px"></td>
+					<td><input type="checkbox" name="secret" id="secret"/><label for="secret">
+					不要公开我的个人信息</label>
+					<!--label属性是绑定 点文字照样可以勾选复选框，要在前面定义id,然后label里用for-->
+					<input type="file" value="浏览">
+					<!-- file 是浏览上传文件， hidden是隐藏信息，后台不想给用户看见，但依然会上传数据的-->
+					<input type="hidden" name="hidden" value="你看不见我">
+					</td>
+				 </tr>
+				 
+				 <tr>
+				     <td height="40px"></td>
+                     <td><input type="submit" value="保存"/>
+					 <input type="reset" value="重填"></input>
+					 <input type="button" value="按钮"></input>
+                     <button>这是个按钮</button>
+					 <input type="image" src="image/4.jpg"/></input><!--一般不用图片记住按钮-->
+					 </td>
+				 </tr>
+			 </table>
+		  </form>
+
+       <h2 align="center">表单控件</h2>
+	     <form align="center">
+		    <fieldset>
+			   <legend>欢迎登录</legend>
+		          用户名：<input type="text" name="username" value="" size="20" maxlength="20" required/></br> 
+                  密&nbsp;&nbsp;&nbsp; 码：<input type="password" name="psw" value="请填写密码"/> </br> 
+		          <input type="submit" value="登录" />
+		   </fieldset>
+		 </form>
+
+
+
+
+		 <h1 align="center">其它常用标记</h1>
+		  <h2 align="center">浮动框架iframe</h2>
+		     <p>
+			    <a href="html文字插图.html" target="window">案例一</a>
+				<a href="html文字语法.html" target="window">案例二</a>
+			 </p>
+		   <iframe src="html文字插图.html" width="400px" height="400px"  frameborder="0"
+		    name="window" ></iframe>
+		   <!-- frameborder两个属性值0、1，0的时候去掉边框  可以给iframe定义一个name属性 ，然后可以加入超链接选择打开scrolling="no"  是iframe的属性去掉打开网页的滚动条，默认为yes-->
+
+		 <h2 align="center">摘要与细节，收起与展开</h2>
+		   <details>
+		     <summary>发票信息</summary>
+			  <div>
+			    付款单位：<input/></br>
+				发票类型：
+				<select>
+				  <option>生活用品</option>
+				  <option>数码产品</option>
+				  <option>办公用品</option>
+				  <option>明细</option>
+				</select>
+			   </div>
+			</details></br>
+
+		<h1>磁盘使用量</h1>
+		<div>
+		  磁盘1：<meter min="0" max="100" value="60" title="60%"></meter>
+		  磁盘2：<meter min="0" max="100" value="30" title="30%"></meter>
+		</div>
+
+		<h1>投票：豆腐脑是甜的还是咸的</h1>
+		甜的：<meter min="0" max="54420" value="31050"></meter></br>
+
+		<h1 align="center">时间元素</h1>
+		 <time datetime="2002-2-20"><mark>2002年的第一场雪</mark></time>
+
+		 <!--meter,投票占比例用的 mark：强调标记用的  背景色会变黄色-->
+		 </br></br>
+
+		<h1 align="center">表单最终练习:京东登录页</h1>
+		<header>
+		   <table >
+		   <!--用图和文字同时一行可以用table来实现 一行两列-->
+		     <tr>
+			   <td width="180px"><img src="img/jd_logo.png"/></td>
+			   <td valign="bottom" height="100px"><h1 align="center">欢迎登录</h1></td>
+			 </tr>2019/3/1
+           </table>
+		</header>
+
+		<section>
+		  <form> <!--九行两列-->
+		    <table width="750px" border="1px" bordercolor="black" cellspacing="0" align="center" >
+			  <tr>
+			    <td rowspan="8" width="445" ><img src="img/login.png"</td>
+				<td>用户名/邮箱：</td>
+			  </tr>
+			   <tr>
+			    <td><input type="text" name="username" value="mary@163.com"/></td>
+			   </tr>
+
+			   <tr>
+			    <td>密码：</td>	
+			  </tr>
+
+			   <tr>
+			    <td><input type="password"  name="psw"/></td>	
+			  </tr>
+
+			   <tr>
+			    <td><input type="checkbox" name="auto" id="auto"><label for="auto">自动登录</label></td>	
+			  </tr>
+
+			   <tr>
+			    <td align="center"><input type="submit" value="登录"> 
+				<input type="reset" value="重填"></td>	
+			  </tr>
+
+			   <tr>
+			    <td>使用京东合作账号登录</td>	
+			  </tr>
+
+			   <tr>
+			    <td align="right"><input type="radio" name="hezuo" value="QQ">QQ
+				<input type="radio" name="hezuo" value="京东钱包">京东钱包</td>	
+			  </tr>
+
+			   <tr>
+			    <td colspan="2" align="right"><a href="http//:www.jingdong.com"><img src="img/btn_register.jpg">
+				</td>	
+			  </tr>
+			</table>
+
+			
+		  </form>
+		</section>
+
+		<footer>
+          <table align="center">
+			<tr>
+			   <td height="60px" valign="bottom">关于我们|</td>
+			   <td valign="bottom">联系我们|</td>
+			   <td valign="bottom">人才招聘|</td>
+			   <td valign="bottom">商家入驻|</td>
+			   <td valign="bottom">广告服务</td>
+			</tr>
+			</table>
+		</footer>
+
+ </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>CSS样式练习</title>
+  <link rel="stylesheet" type="text/css" href="外部样式.css">
+ <!--  <style type="text/css">
+     h1{
+	    color:pink !important;
+        color:purple;
+		font-size:25px;
+       }
+
+	   *{
+          font-size:16px;
+		  font-family:"华文彩云";
+		  color:black;
+	   }
+	   .blue{
+	   color:blue;
+	   font-family:"华文新魏";
+	   }
+	   .abc{
+	   font-size:30px;
+	   }
+
+	  
+  </style>
+ </head>
+ <body>
+    <p style="font-size:40px;color:red;">这是段落标记的内容 直接嵌入</p>
+	<h1>这是<span>标题1的内容</span> 内联样式（越靠近优先级越高）</h1>
+	<p class="blue">这是正文<p>
+	<h2 class="blue abc">这是标题2的内容 外部样式</h2>
+	<p>这是正文<p>
+	<h2>这是标题3</h2>
+	<p>这是正文<p>      -->
+
+
+
+  <!--  <style>
+	    h1,h2,.red{
+		color:red;
+		}
+		h1,p{
+		background-color:silver;
+		}
+	 </style>
+	   <h1  align="center">选择器练习</h1></br>
+	   <h2>一.基础选择器</h2>
+	   <h3>1.简单选择器</h3>
+	   <p>元素选择器</p>
+	   <p>类选择器</p>
+	   <P></P>  -->
+
+     
+<!--	 <style>
+	  span{
+	  color:red;
+	  font-size:20px;
+	  }
+	  p span{
+	  background-color:blue; 
+	  }
+	  p a{
+	    color:green;
+	  }
+	  
+	  
+	 </style>
+	   <h1>这是<span>标题</span>后代选择器</h1>
+	   <p>这是<span>文字</span></p>
+	   <p><a href="#">这是链接</a></p>  -->
+
+
+	    <style>
+	  span{
+	  color:red;
+	  font-size:20px;
+	  }
+	  
+	  p a{
+	    color:green;
+	  }
+	  
+	  h1>span{
+	  background-color:yellow;
+	  }
+
+	  a:link{
+	  color:green;
+	  font-size:20px;
+	  }
+	  a:visited{
+	  color:red;
+	  border:1 px solid;
+	  font-size:25px;
+	  }
+	  a:hover{
+	  color:purple;
+	  background-color:yellow;
+	  }
+	  input:focus{
+	  color:red;
+	  border:2px solid;
+	  }
+	    
+	 </style>
+	 <div>
+	   <h1>这是<span>标题</span>子代选择器</h1>
+	   <p>这是文字</p>
+	   <p><a href="#">这是链接</a></p> </div>
+
+	   <h1>伪类样式</h1>
+	   <a href="#">访问过链接</a></br>
+	   <a href="#">未访问过链接</a></br>
+	   <input type="text">
+
+
+ </body>
+</html>
